@@ -10,6 +10,7 @@
   * { box-sizing:border-box; margin:0; padding:0; }
   body { font-family:"Open Sans",sans-serif; background:var(--warm-white); color:var(--slate); min-height:100vh; }
   .header { background:var(--deep-teal); padding:16px 32px; display:flex; align-items:center; justify-content:space-between; }
+  .header img { height:52px; }
   .header-tagline { font-family:"Caveat",cursive; color:var(--orange); font-size:17px; text-align:right; }
   .hero { background:linear-gradient(135deg,var(--deep-teal),var(--teal)); padding:48px 32px 40px; text-align:center; }
   .hero h1 { font-family:"Caveat",cursive; font-size:44px; color:#fff; margin-bottom:12px; }
@@ -88,10 +89,6 @@
   .cta-item { display:flex; align-items:center; gap:12px; font-size:13px; color:var(--slate); line-height:1.55; }
   .cta-dot { width:8px; height:8px; border-radius:50%; background:var(--orange); flex-shrink:0; }
   .cta-item a { color:var(--teal); text-decoration:underline; }
-  .share-block { background:var(--light-teal); border-radius:12px; padding:20px 22px; margin-bottom:28px; text-align:center; }
-  .share-title { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--deep-teal); margin-bottom:10px; }
-  .share-text { font-size:12px; color:var(--slate); line-height:1.65; margin-bottom:14px; background:#fff; border-radius:8px; padding:12px 14px; text-align:left; border:1px solid #e0ecf0; }
-  .btn-share { font-family:"Montserrat",sans-serif; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#fff; background:#0077B5; border:none; border-radius:8px; padding:11px 20px; cursor:pointer; transition:background 0.2s; }
   .btn-share:hover { background:#005f91; }
   .breakdown-title { font-family:"Montserrat",sans-serif; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--slate); margin-bottom:14px; }
   .cat-result { background:#fff; border-radius:12px; padding:18px 22px; margin-bottom:10px; border:1px solid #e0ecf0; }
@@ -103,6 +100,7 @@
   .cat-advice { font-size:12px; line-height:1.65; color:var(--slate); padding-top:8px; border-top:1px solid #e8ecee; }
   .training-nudge { background:linear-gradient(135deg,#fff8f5,#fff); border:1px solid #ffd5c0; border-left:4px solid var(--orange); border-radius:12px; padding:18px 22px; margin-top:20px; font-size:13px; line-height:1.7; color:var(--slate); }
   .training-nudge strong { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--orange); display:block; margin-bottom:6px; }
+  .training-nudge a { color:var(--orange); text-decoration:underline; }
   .about-van { background:var(--deep-teal); border-radius:16px; padding:32px 28px; margin-top:20px; }
   .about-van-title { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:6px; }
   .about-van-name { font-family:"Caveat",cursive; font-size:32px; color:#fff; margin-bottom:12px; }
@@ -128,7 +126,7 @@
   .footer p { font-size:11px; color:rgba(255,255,255,0.45); }
   .footer a { color:var(--teal); text-decoration:none; }
   @media(max-width:600px){
-    .header{padding:14px 18px;} .header-tagline{font-size:13px;}
+    .header{padding:14px 18px;} .header img{height:40px;} .header-tagline{font-size:13px;}
     .hero{padding:36px 18px 32px;} .hero h1{font-size:34px;}
     .main{padding:20px 14px 50px;} .question-card{padding:18px;}
     .intro-box,.leadgen-box{padding:28px 20px;} .result-hero{padding:32px 20px;}
@@ -141,7 +139,7 @@
 <body>
 
 <div class="header">
-  <span style="font-family:'Caveat',cursive;font-size:22px;color:#fff;font-weight:700;">The Talent Hunter</span>
+  <img src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QOBaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0MCA3OS4xNjA0NTEsIDIwMTcvMDUvMDYtMDE6MDg6MjEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MjMyOGQ2MWUtNGIxMi00YWEwLWFkNDktOTkyZjIyMDYyYzQ0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjk2QkQxNkEzODRGNjExRTg5RkE0QkMwRURDMTIzQjhEIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjk2QkQxNkEyODRGNjExRTg5RkE0QkMwRURDMTIzQjhEIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMyOGQ2MWUtNGIxMi00YWEwLWFkNDktOTkyZjIyMDYyYzQ0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIzMjhkNjFlLTRiMTItNGFhMC1hZDQ5LTk5MmYyMjA2MmM0NCIvPiA8L3JkZjpEZXNjcmlwdGlv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" alt="Vanessa Raath The Talent Hunter">
   <span class="header-tagline">AI Handles Tasks. Humans Handle Trust.</span>
 </div>
 
@@ -184,14 +182,14 @@
       </div>
       <div class="role-label">Select your role:</div>
       <div class="role-grid" id="roleGrid">
-        <label class="role-option"><input type="radio" name="role" value="solo"><span>Solo / Freelance Recruiter</span></label>
-        <label class="role-option"><input type="radio" name="role" value="individual"><span>Agency Recruiter</span></label>
-        <label class="role-option"><input type="radio" name="role" value="team"><span>Agency Business Owner / Managing Director</span></label>
-        <label class="role-option"><input type="radio" name="role" value="individual"><span>In-House Talent Acquisition Specialist</span></label>
-        <label class="role-option"><input type="radio" name="role" value="team"><span>Talent Acquisition Manager</span></label>
-        <label class="role-option"><input type="radio" name="role" value="team"><span>Head of Talent Acquisition</span></label>
-        <label class="role-option"><input type="radio" name="role" value="team"><span>VP / Director of Talent Acquisition</span></label>
-        <label class="role-option"><input type="radio" name="role" value="team"><span>Chief People Officer</span></label>
+        <div class="role-option" data-value="solo" onclick="selectRole(this)"><span>Solo / Freelance Recruiter</span></div>
+        <div class="role-option" data-value="individual" onclick="selectRole(this)"><span>Agency Recruiter</span></div>
+        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Agency Business Owner / Managing Director</span></div>
+        <div class="role-option" data-value="individual" onclick="selectRole(this)"><span>In-House Talent Acquisition Specialist</span></div>
+        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Talent Acquisition Manager</span></div>
+        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Head of Talent Acquisition</span></div>
+        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>VP / Director of Talent Acquisition</span></div>
+        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Chief People Officer</span></div>
       </div>
       <div class="validation-msg" id="roleValidation">Please select your role before continuing.</div>
       <div class="nav-row" style="justify-content:flex-end;margin-top:24px;">
@@ -220,12 +218,13 @@
     <div class="leadgen-box">
       <div class="leadgen-icon">🎉</div>
       <h2>Almost there!</h2>
-      <p>No automated emails, no spam. Just drop your details below so I know who's on the other side of this and head straight to your results.</p>
+      <p>Enter your details below to see your personalised results. Your data is only used for your results and optional follow-up.</p>
       <div class="form-group"><label>Full Name <span style="color:var(--orange)">*</span></label><input type="text" id="lgName" placeholder="Your full name" required></div>
       <div class="form-group"><label>Email Address <span style="color:var(--orange)">*</span></label><input type="email" id="lgEmail" placeholder="you@company.com" required></div>
       <div class="form-group"><label>Company Name <span style="color:var(--orange)">*</span></label><input type="text" id="lgCompany" placeholder="Your company or practice name" required></div>
       <div class="validation-msg" id="leadgenValidation">Please complete all fields to see your results.</div>
       <button class="btn-next" style="width:100%;margin-top:12px;" onclick="submitLeadGen()">SEE MY RESULTS</button>
+      <div class="privacy-note">No automated emails, no spam. Just drop your details below so I know who's on the other side of this and head straight to your results.</div>
     </div>
   </div>
 
@@ -247,14 +246,8 @@
       <div class="cta-items">
         <div class="cta-item"><div class="cta-dot"></div><span>Follow Vanessa on LinkedIn to get access to her Recruitment RewAIred Newsletter: <a href="https://www.linkedin.com/in/vanessaraath/" target="_blank">linkedin.com/in/vanessaraath</a></span></div>
         <div class="cta-item"><div class="cta-dot"></div><span>Vanessa's curated list of <a href="https://start.me/p/l6bkk7/vanessa-raath-s-tried-tested-ai-tools" target="_blank">Tried and Tested AI Tools</a></span></div>
-        <div class="cta-item"><div class="cta-dot"></div><span>Get in touch directly: <a href="/cdn-cgi/l/email-protection#b6c0d7d8f6c0d7d8d3c5c5d7c4d7d7c2de98d5d9db"><span class="__cf_email__" data-cfemail="afd9cec1efd9cec1cadcdcceddcecedbc781ccc0c2">[email&#160;protected]</span></a></span></div>
+        <div class="cta-item"><div class="cta-dot"></div><span>Get in touch directly with Vanessa: <a href="/cdn-cgi/l/email-protection#aadccbc4eadccbc4cfd9d9cbd8cbcbdec284c9c5c7"><span class="__cf_email__" data-cfemail="0b7d6a654b7d6a656e78786a796a6a7f6325686466">[email&#160;protected]</span></a></span></div>
       </div>
-    </div>
-
-    <div class="share-block">
-      <div class="share-title">Share Your Score on LinkedIn</div>
-      <div class="share-text" id="shareText"></div>
-      <button class="btn-share" onclick="shareOnLinkedIn()">Share on LinkedIn</button>
     </div>
 
     <div class="breakdown-title">YOUR CATEGORY BREAKDOWN</div>
@@ -291,7 +284,7 @@
         </div>
       </div>
       <div class="speak-cta">
-        Interested in Vanessa speaking at your next event, running a Prompt Engineering Workshop with your team, or getting guidance on your next AI tool purchase? Get in touch: <a href="/cdn-cgi/l/email-protection#1066717e5066717e7563637162717164783e737f7d"><span class="__cf_email__" data-cfemail="a7d1c6c9e7d1c6c9c2d4d4c6d5c6c6d3cf89c4c8ca">[email&#160;protected]</span></a>
+        Interested in Vanessa speaking at your next event, running a Prompt Engineering Workshop with your team, or getting guidance on your next AI tool purchase? Get in touch: <a href="/cdn-cgi/l/email-protection#5d2b3c331d2b3c33382e2e3c2f3c3c2935733e3230"><span class="__cf_email__" data-cfemail="f385929db385929d96808092819292879bdd909c9e">[email&#160;protected]</span></a>
       </div>
       <div class="linkedin-cta">
         <div class="linkedin-cta-text">
@@ -404,28 +397,38 @@ const socialProofLines = {
   fluent:"You are in the top tier globally. Here is where you landed."
 };
 
-const shareTexts = {
-  observer:"Just took Vanessa Raath's AI Fluency Assessment for Recruiters. Honest reality check on where I am with AI. Curious where you would land?",
-  dabbler:"Turns out I am an AI Dabbler. Vanessa Raath's AI Fluency Assessment gave me a proper reality check and a clear next step. Where would you score?",
-  integrator:"AI Integrator, apparently. Vanessa Raath's free assessment is the most honest 5 minutes you will spend on your AI journey this month.",
-  fluent:"Scored as an AI-Fluent Recruiter on Vanessa Raath's assessment. Took 5 minutes and still spotted gaps I had not thought about. Worth a go."
-};
 
 const profiles = [
   { range:[24,42], name:"The AI Observer", key:"observer",
-    advice:(r)=>`${roleOpeners[r]} are not behind because of speed. The starting line is not always obvious. A large proportion of recruiters globally are still at this stage, so you are far from alone.\n\nThe honest truth? The recruiters who will struggle in the next two years are not the ones who tried AI and failed. They are the ones who never really started.\n\nThe next step is not a tool. It is a decision. Pick one task that repeats every single day and ask: could AI take a first pass at this? Start there. One task. One tool. One week.`,
+    advice:(r)=>`${roleOpeners[r]} are not behind because of speed. The starting line is not always obvious. A large proportion of recruiters globally are still at this stage, so you are far from alone.
+
+The honest truth? The recruiters who will struggle in the next two years are not the ones who tried AI and failed. They are the ones who never really started.
+
+The next step is not a tool. It is a decision. Pick one task that repeats every single day and ask: could AI take a first pass at this? Start there. One task. One tool. One week.`,
     training:"The most powerful next step is simply to start. Pick one task you repeat every single day. Open any free AI tool and ask it to take a first pass. Tweak the prompt. Run it again. That is how fluency begins. Not with the perfect tool. With the first attempt.",
     congrats:false },
   { range:[43,60], name:"The AI Dabbler", key:"dabbler",
-    advice:(r)=>`${roleOpeners[r]} are in the game, but playing without a clear strategy. There have been wins, and then AI quietly dropped back off the priority list. Sound familiar?\n\nThe gap is not knowledge. It is consistency. When AI use is random, momentum disappears. When it is systematic, the compounding kicks in.\n\nIdentify the two or three tasks where AI has already delivered and make them non-negotiable. Write them into your process. Stop relying on motivation to make it happen.`,
+    advice:(r)=>`${roleOpeners[r]} are in the game, but playing without a clear strategy. There have been wins, and then AI quietly dropped back off the priority list. Sound familiar?
+
+The gap is not knowledge. It is consistency. When AI use is random, momentum disappears. When it is systematic, the compounding kicks in.
+
+Identify the two or three tasks where AI has already delivered and make them non-negotiable. Write them into your process. Stop relying on motivation to make it happen.`,
     training:"You do not need another tool. You need a habit. The recruiters who break through this stage are the ones who stop treating AI as something they do when they remember, and start treating it as something they do by default.",
     congrats:false },
   { range:[61,77], name:"The AI Integrator", key:"integrator",
-    advice:(r)=>`${roleOpeners[r]} have moved past experimentation and are building something real. AI is saving time, prompts are sharper, and it is starting to feel like a normal part of the job.\n\nThis is the stage most people stall at. What separates you from the next level is not more tools or better prompts. It is knowing what AI is actually saving you, in time, in quality, in capacity, and being able to prove it.\n\nThe tool side is working. Making that work measurable is where the gap usually lives.`,
+    advice:(r)=>`${roleOpeners[r]} have moved past experimentation and are building something real. AI is saving time, prompts are sharper, and it is starting to feel like a normal part of the job.
+
+This is the stage most people stall at. What separates you from the next level is not more tools or better prompts. It is knowing what AI is actually saving you, in time, in quality, in capacity, and being able to prove it.
+
+The tool side is working. Making that work measurable is where the gap usually lives.`,
     training:"You have built the muscle. Now build the proof. Track time saved on three AI-assisted tasks this month. Note where quality went up and where it did not. That data is what turns \"I use AI\" into \"AI makes me measurably better.\" That is what clients and hiring managers actually care about.",
     congrats:false },
   { range:[78,96], name:"The AI-Fluent Recruiter", key:"fluent",
-    advice:(r)=>`${roleOpeners[r]} are ahead of most in the industry right now. AI is not a project. It is just how work gets done. Prompts are sharp, workflows are defined, and there is a clear eye on policy and risk.\n\nThe question now is not how to use AI more. It is how to use it better. That means sharper judgment about when not to use it, stronger human skills to complement it, and a mindset that keeps evolving as the tools do.\n\nThis is the level where you start influencing clients, candidates, and the wider community with what you know.`,
+    advice:(r)=>`${roleOpeners[r]} are ahead of most in the industry right now. AI is not a project. It is just how work gets done. Prompts are sharp, workflows are defined, and there is a clear eye on policy and risk.
+
+The question now is not how to use AI more. It is how to use it better. That means sharper judgment about when not to use it, stronger human skills to complement it, and a mindset that keeps evolving as the tools do.
+
+This is the level where you start influencing clients, candidates, and the wider community with what you know.`,
     training:"You are past the point where anyone needs to convince you. The question now is what you do with the advantage. Build something: a prompt chain that runs a full workflow, an internal playbook that helps your team catch up, a system that is genuinely yours. Or lead something: share what you have learned, because the industry needs more practitioners in this conversation, not more spectators.",
     congrats:true }
 ];
@@ -465,12 +468,19 @@ const catAdvice = {
 
 let answers={}, currentCat=0, userRole="individual", userRoleLabel="", categories=questionsI;
 
+let selectedRoleEl = null;
+
+function selectRole(el){
+  document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
+  el.classList.add("selected");
+  selectedRoleEl = el;
+}
+
 function startAssessment(){
-  const sel=document.querySelector("#roleGrid input:checked");
-  if(!sel){ document.getElementById("roleValidation").style.display="block"; return; }
+  if(!selectedRoleEl){ document.getElementById("roleValidation").style.display="block"; return; }
   document.getElementById("roleValidation").style.display="none";
-  userRole=sel.value;
-  userRoleLabel=sel.closest(".role-option").querySelector("span").textContent;
+  userRole=selectedRoleEl.dataset.value;
+  userRoleLabel=selectedRoleEl.querySelector("span").textContent;
   categories=userRole==="team"?questionsWe:questionsI;
   document.getElementById("progressWrap").style.display="flex";
   showScreen("screen-questions");
@@ -582,7 +592,6 @@ function showResults(){
   document.getElementById("resultAdvice").innerHTML=profile.advice(userRole).replace(/\n\n/g,"<br><br>");
   document.getElementById("trainingNudge").innerHTML="<strong>A THOUGHT FROM VANESSA</strong> "+profile.training;
   document.getElementById("resultCongrats").style.display=profile.congrats?"inline-block":"none";
-  document.getElementById("shareText").textContent=shareTexts[profile.key]+" "+ASSESSMENT_URL;
   renderBreakdown();
 }
 
@@ -630,19 +639,14 @@ function renderBreakdown(){
   },100);
 }
 
-function shareOnLinkedIn(){
-  const text=document.getElementById("shareText").textContent;
-  const url="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(ASSESSMENT_URL)+"&summary="+encodeURIComponent(text);
-  window.open(url,"_blank");
-}
 
 function restartAssessment(){
   answers={}; currentCat=0; userRole="individual"; userRoleLabel=""; categories=questionsI;
+  selectedRoleEl=null;
   document.getElementById("lgName").value="";
   document.getElementById("lgEmail").value="";
   document.getElementById("lgCompany").value="";
-  document.querySelectorAll("#roleGrid input").forEach(i=>i.checked=false);
   document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
   showScreen("screen-intro");
   document.getElementById("progressWrap").style.display="none";
-  updateProgres
+  updateProgre
