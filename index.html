@@ -649,4 +649,15 @@ function restartAssessment(){
   document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
   showScreen("screen-intro");
   document.getElementById("progressWrap").style.display="none";
-  updateProgre
+  updateProgress();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".role-option").forEach(el=>{
+    el.addEventListener("click",()=>selectRole(el));
+  });
+});
+</script>
+</body>
+</html>
