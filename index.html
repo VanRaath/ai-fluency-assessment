@@ -182,14 +182,14 @@
       </div>
       <div class="role-label">Select your role:</div>
       <div class="role-grid" id="roleGrid">
-        <div class="role-option" data-value="solo" onclick="selectRole(this)"><span>Solo / Freelance Recruiter</span></div>
-        <div class="role-option" data-value="individual" onclick="selectRole(this)"><span>Agency Recruiter</span></div>
-        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Agency Business Owner / Managing Director</span></div>
-        <div class="role-option" data-value="individual" onclick="selectRole(this)"><span>In-House Talent Acquisition Specialist</span></div>
-        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Talent Acquisition Manager</span></div>
-        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Head of Talent Acquisition</span></div>
-        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>VP / Director of Talent Acquisition</span></div>
-        <div class="role-option" data-value="team" onclick="selectRole(this)"><span>Chief People Officer</span></div>
+        <label class="role-option"><input type="radio" name="role" value="solo"><span>Solo / Freelance Recruiter</span></label>
+        <label class="role-option"><input type="radio" name="role" value="individual"><span>Agency Recruiter</span></label>
+        <label class="role-option"><input type="radio" name="role" value="team"><span>Agency Business Owner / Managing Director</span></label>
+        <label class="role-option"><input type="radio" name="role" value="individual"><span>In-House Talent Acquisition Specialist</span></label>
+        <label class="role-option"><input type="radio" name="role" value="team"><span>Talent Acquisition Manager</span></label>
+        <label class="role-option"><input type="radio" name="role" value="team"><span>Head of Talent Acquisition</span></label>
+        <label class="role-option"><input type="radio" name="role" value="team"><span>VP / Director of Talent Acquisition</span></label>
+        <label class="role-option"><input type="radio" name="role" value="team"><span>Chief People Officer</span></label>
       </div>
       <div class="validation-msg" id="roleValidation">Please select your role before continuing.</div>
       <div class="nav-row" style="justify-content:flex-end;margin-top:24px;">
@@ -468,19 +468,12 @@ const catAdvice = {
 
 let answers={}, currentCat=0, userRole="individual", userRoleLabel="", categories=questionsI;
 
-let selectedRoleEl = null;
-
-function selectRole(el){
-  document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
-  el.classList.add("selected");
-  selectedRoleEl = el;
-}
-
 function startAssessment(){
-  if(!selectedRoleEl){ document.getElementById("roleValidation").style.display="block"; return; }
+  const sel=document.querySelector("#roleGrid input:checked");
+  if(!sel){ document.getElementById("roleValidation").style.display="block"; return; }
   document.getElementById("roleValidation").style.display="none";
-  userRole=selectedRoleEl.dataset.value;
-  userRoleLabel=selectedRoleEl.querySelector("span").textContent;
+  userRole=sel.value;
+  userRoleLabel=sel.closest(".role-option").querySelector("span").textContent;
   categories=userRole==="team"?questionsWe:questionsI;
   document.getElementById("progressWrap").style.display="flex";
   showScreen("screen-questions");
@@ -642,10 +635,10 @@ function renderBreakdown(){
 
 function restartAssessment(){
   answers={}; currentCat=0; userRole="individual"; userRoleLabel=""; categories=questionsI;
-  selectedRoleEl=null;
   document.getElementById("lgName").value="";
   document.getElementById("lgEmail").value="";
   document.getElementById("lgCompany").value="";
+  document.querySelectorAll("#roleGrid input").forEach(i=>i.checked=false);
   document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
   showScreen("screen-intro");
   document.getElementById("progressWrap").style.display="none";
@@ -654,8 +647,11 @@ function restartAssessment(){
 }
 
 document.addEventListener("DOMContentLoaded",()=>{
-  document.querySelectorAll(".role-option").forEach(el=>{
-    el.addEventListener("click",()=>selectRole(el));
+  document.querySelectorAll(".role-option input").forEach(input=>{
+    input.addEventListener("change",()=>{
+      document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
+      input.closest(".role-option").classList.add("selected");
+    });
   });
 });
 </script>
