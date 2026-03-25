@@ -89,6 +89,10 @@
   .cta-item { display:flex; align-items:center; gap:12px; font-size:13px; color:var(--slate); line-height:1.55; }
   .cta-dot { width:8px; height:8px; border-radius:50%; background:var(--orange); flex-shrink:0; }
   .cta-item a { color:var(--teal); text-decoration:underline; }
+  .share-block { background:var(--light-teal); border-radius:12px; padding:20px 22px; margin-bottom:28px; text-align:center; }
+  .share-title { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--deep-teal); margin-bottom:10px; }
+  .share-text { font-size:12px; color:var(--slate); line-height:1.65; margin-bottom:14px; background:#fff; border-radius:8px; padding:12px 14px; text-align:left; border:1px solid #e0ecf0; }
+  .btn-share { font-family:"Montserrat",sans-serif; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#fff; background:#0077B5; border:none; border-radius:8px; padding:11px 20px; cursor:pointer; transition:background 0.2s; }
   .btn-share:hover { background:#005f91; }
   .breakdown-title { font-family:"Montserrat",sans-serif; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--slate); margin-bottom:14px; }
   .cat-result { background:#fff; border-radius:12px; padding:18px 22px; margin-bottom:10px; border:1px solid #e0ecf0; }
@@ -145,7 +149,7 @@
 
 <div class="hero">
   <h1>Are You Keeping Up With AI in Recruitment?</h1>
-  <p>A ten-minute assessment for Recruiters, TA Professionals, Recruitment Agency Owners and Recruitment Leaders.</p>
+  <p>A five-minute assessment for Recruiters, TA Professionals, Recruitment Agency Owners and Recruitment Leaders.</p>
   <p class="hero-sub">24 Questions &nbsp;·&nbsp; 6 Categories &nbsp;·&nbsp; Personalised Results</p>
 </div>
 
@@ -160,7 +164,7 @@
   <div class="screen active" id="screen-intro">
     <div class="intro-box">
       <h2>Before you start</h2>
-      <div class="intro-note">This assessment should not take you longer than 10 minutes. Please answer honestly, this assessment has been designed to measure current behaviour, not intended behaviour.</div>
+      <div class="intro-note">Takes about 5 minutes. Answer honestly   this assessment measures behaviour, not intention.</div>
       <p>This assessment covers six areas of AI fluency in recruitment. There are no right or wrong answers, only an honest reflection of where you are right now.</p>
       <p><strong>Each set of questions is divided into these categories:</strong></p>
       <div class="intro-chips">
@@ -174,10 +178,10 @@
       <div class="scale-preview">
         <div class="scale-preview-title">The Scale</div>
         <div class="scale-preview-row">
-          <div class="scale-preview-item"><span class="scale-preview-num">1</span><span class="scale-preview-label">Strongly Disagree</span></div>
-          <div class="scale-preview-item"><span class="scale-preview-num">2</span><span class="scale-preview-label">Disagree</span></div>
-          <div class="scale-preview-item"><span class="scale-preview-num">3</span><span class="scale-preview-label">Agree</span></div>
-          <div class="scale-preview-item"><span class="scale-preview-num">4</span><span class="scale-preview-label">Strongly Agree</span></div>
+          <div class="scale-preview-item"><span class="scale-preview-num">1</span><span class="scale-preview-label">Not yet</span></div>
+          <div class="scale-preview-item"><span class="scale-preview-num">2</span><span class="scale-preview-label">Sometimes</span></div>
+          <div class="scale-preview-item"><span class="scale-preview-num">3</span><span class="scale-preview-label">Mostly</span></div>
+          <div class="scale-preview-item"><span class="scale-preview-num">4</span><span class="scale-preview-label">Always</span></div>
         </div>
       </div>
       <div class="role-label">Select your role:</div>
@@ -219,12 +223,12 @@
       <div class="leadgen-icon">🎉</div>
       <h2>Almost there!</h2>
       <p>Enter your details below to see your personalised results. Your data is only used for your results and optional follow-up.</p>
-      <div class="form-group"><label>Full Name <span style="color:var(--orange)">*</span></label><input type="text" id="lgName" placeholder="Your full name" required></div>
+      <div class="form-group"><label>First Name <span style="color:var(--orange)">*</span></label><input type="text" id="lgName" placeholder="Your first name" required></div>
       <div class="form-group"><label>Email Address <span style="color:var(--orange)">*</span></label><input type="email" id="lgEmail" placeholder="you@company.com" required></div>
       <div class="form-group"><label>Company Name <span style="color:var(--orange)">*</span></label><input type="text" id="lgCompany" placeholder="Your company or practice name" required></div>
       <div class="validation-msg" id="leadgenValidation">Please complete all fields to see your results.</div>
       <button class="btn-next" style="width:100%;margin-top:12px;" onclick="submitLeadGen()">SEE MY RESULTS</button>
-      <div class="privacy-note">No automated emails, no spam. Just drop your details below so I know who's on the other side of this and head straight to your results.</div>
+      <div class="privacy-note">Your data is only used to send you your results. Unsubscribe anytime.</div>
     </div>
   </div>
 
@@ -244,10 +248,16 @@
     <div class="cta-block" style="margin-top:20px;">
       <div class="cta-block-title">Ready to Take the Next Step?</div>
       <div class="cta-items">
-        <div class="cta-item"><div class="cta-dot"></div><span>Follow Vanessa on LinkedIn to get access to her Recruitment RewAIred Newsletter: <a href="https://www.linkedin.com/in/vanessaraath/" target="_blank">linkedin.com/in/vanessaraath</a></span></div>
-        <div class="cta-item"><div class="cta-dot"></div><span>Vanessa's curated list of <a href="https://start.me/p/l6bkk7/vanessa-raath-s-tried-tested-ai-tools" target="_blank">Tried and Tested AI Tools</a></span></div>
-        <div class="cta-item"><div class="cta-dot"></div><span>Get in touch directly with Vanessa: <a href="/cdn-cgi/l/email-protection#aadccbc4eadccbc4cfd9d9cbd8cbcbdec284c9c5c7"><span class="__cf_email__" data-cfemail="0b7d6a654b7d6a656e78786a796a6a7f6325686466">[email&#160;protected]</span></a></span></div>
+        <div class="cta-item"><div class="cta-dot"></div><span>Follow Vanessa on LinkedIn for the Recruitment RewAIred Newsletter every second week   practical AI and sourcing insights, no hype: <a href="https://www.linkedin.com/in/vanessaraath/" target="_blank">linkedin.com/in/vanessaraath</a></span></div>
+        <div class="cta-item"><div class="cta-dot"></div><span>Vanessa's curated list of tried and tested AI tools: <a href="https://start.me/p/l6bkk7/vanessa-raath-s-tried-tested-ai-tools" target="_blank">Vanessa's AI Tools List</a></span></div>
+        <div class="cta-item"><div class="cta-dot"></div><span>Get in touch directly: <a href="mailto:van&#64;vanessaraath.com">van&#64;vanessaraath.com</a></span></div>
       </div>
+    </div>
+
+    <div class="share-block">
+      <div class="share-title">Share Your Score on LinkedIn</div>
+      <div class="share-text" id="shareText"></div>
+      <button class="btn-share" onclick="shareOnLinkedIn()">Share on LinkedIn</button>
     </div>
 
     <div class="breakdown-title">YOUR CATEGORY BREAKDOWN</div>
@@ -256,10 +266,10 @@
     <div class="about-van">
       <div class="about-van-title">About Your Assessor</div>
       <div class="about-van-name">Vanessa Raath</div>
-      <div class="about-van-bio">Vanessa is a globally recognised AI Fluency Trainer specialising in Recruitment and HR. A keynote speaker across five continents and a practising expert in Talent Sourcing, she founded The Talent Hunter in 2019. Since then she has trained over 8,000 recruiters in more than 100 countries, helping them harness AI without losing the human edge that makes great recruitment possible.</div>
+      <div class="about-van-bio">Vanessa is a global talent sourcing trainer, keynote speaker, and AI strategist. Since launching The Talent Hunter in 2019, she has trained over 8,000 recruiters across more than 100 countries, helping them work smarter with AI without losing the human edge that makes great recruitment possible.</div>
       <div class="about-van-stats">
         <a class="stat-pill" href="https://www.linkedin.com/in/vanessaraath/" target="_blank">
-          <span class="stat-num">585+</span><span class="stat-label">LinkedIn Recommendations</span>
+          <span class="stat-num">580+</span><span class="stat-label">LinkedIn Recommendations</span>
         </a>
         <a class="stat-pill" href="https://www.trustpilot.com/review/vanessaraath.com" target="_blank">
           <span class="stat-num">4.8 / 5</span><span class="stat-label">Trustpilot Rating</span>
@@ -284,7 +294,7 @@
         </div>
       </div>
       <div class="speak-cta">
-        Interested in Vanessa speaking at your next event, running a Prompt Engineering Workshop with your team, or getting guidance on your next AI tool purchase? Get in touch: <a href="/cdn-cgi/l/email-protection#5d2b3c331d2b3c33382e2e3c2f3c3c2935733e3230"><span class="__cf_email__" data-cfemail="f385929db385929d96808092819292879bdd909c9e">[email&#160;protected]</span></a>
+        Interested in Vanessa speaking at your next event, running a Prompt Engineering Workshop with your team, or getting guidance on your next AI tool purchase? Get in touch: <a href="mailto:van&#64;vanessaraath.com">van&#64;vanessaraath.com</a>
       </div>
       <div class="linkedin-cta">
         <div class="linkedin-cta-text">
@@ -306,7 +316,7 @@
   <p>© Vanessa Raath, The Talent Hunter &nbsp;|&nbsp; <a href="https://www.vanessaraath.com" target="_blank">vanessaraath.com</a> &nbsp;|&nbsp; #upyourhuman</p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const FORMSPREE = "https://formspree.io/f/meervjgr";
 const ASSESSMENT_URL = "https://airecruiterassessment.netlify.app";
 
@@ -315,36 +325,36 @@ const questionsI = [
     "I use AI across more than one stage of my recruitment process, such as sourcing, screening, research, or outreach.",
     "I have identified at least one AI tool that consistently saves me time or improves the quality of my work.",
     "I use AI tools on most working days, not just when I remember or have spare time.",
-    "I have experimented with multiple AI tools and made deliberate choices about which ones to keep and which to drop."
+    "I have tried multiple AI tools and dropped the ones that did not genuinely improve my work."
   ]},
   { id:"skills", name:"Skills and Prompting", subtitle:"How well you are using them", emoji:"💡", questions:[
-    "I can write or adapt prompts that consistently produce useful outputs with minimal rewriting.",
-    "I choose different AI tools for different tasks based on what each does best, rather than defaulting to one tool for everything.",
+    "I can create or adapt prompts that consistently produce useful outputs with minimal rewriting.",
+    "I choose different AI tools for different tasks based on what each one does best, rather than using one tool for everything.",
     "I have actively developed my AI skills in the past 12 months, through training, self-study, or structured experimentation.",
-    "I save and reuse my best prompts rather than starting from scratch each time."
+    "I document or save useful prompts and workflows so I can reuse and improve them rather than starting from scratch each time."
   ]},
   { id:"workflows", name:"Workflows and Integration", subtitle:"Where AI fits in your process", emoji:"⚙️", questions:[
     "AI plays a defined role at specific stages of my recruitment process, such as sourcing, screening, outreach, or admin.",
-    "When I use AI, it is part of a deliberate process rather than something I reach for randomly.",
-    "AI tools connect to or sit alongside the core systems I use daily, such as my ATS or CRM, rather than being entirely separate.",
-    "When I use AI in my workflow, I review whether it is actually delivering value rather than just leaving it running."
+    "AI is part of a structured workflow in my day, rather than something I use randomly when I have a spare moment.",
+    "AI connects to or works alongside my ATS, CRM, or the core tools I use daily, rather than sitting as a separate step.",
+    "I regularly review whether my AI-assisted steps are still the most efficient approach, rather than setting them up once and leaving them."
   ]},
   { id:"policy", name:"Policy and Safety", subtitle:"How you manage risk", emoji:"🔒", questions:[
     "I have clear personal guidelines on what client, candidate, or company data can safely be entered into AI tools.",
-    "I understand the difference between what data is appropriate to enter into a free-tier AI tool and what is not.",
-    "Before using an AI tool with sensitive information, I check whether it stores or trains on the data I enter.",
-    "I review every piece of AI-generated content before it reaches a candidate, client, or colleague."
+    "I know the difference between what data is safe to enter into a free-tier AI tool and what is not.",
+    "I check whether an AI tool stores or trains on my data before using it with client or candidate information.",
+    "I hold myself accountable for reviewing every piece of AI-generated content before it reaches a candidate, client, or colleague."
   ]},
   { id:"culture", name:"Culture and Leadership", subtitle:"How it feels in your practice", emoji:"🌱", questions:[
     "I talk openly about how I use AI and share what is working, rather than keeping it to myself.",
-    "I am willing to try new things with AI, even when previous attempts have not worked out.",
-    "I follow a clear set of personal principles for how I use AI responsibly, even if they are not written down.",
+    "I regularly try new things with AI, even when previous attempts have not worked out.",
+    "I follow a clear set of personal rules for how I use AI responsibly, even if they are not written down.",
     "I believe my human judgment, relationships, and instincts are what make me a great recruiter, and AI is the tool that gives me more time to use them."
   ]},
   { id:"measurement", name:"Measurement and Impact", subtitle:"Whether you can prove what AI is doing for you", emoji:"📊", questions:[
-    "I can point to specific examples of how AI has improved my speed, quality, or the outcomes of my work.",
-    "I have some sense of the time or effort AI saves me, even if I have never formally tracked it.",
-    "I have changed or stopped using an AI approach because the results were not worth the effort.",
+    "I can point to specific examples of how AI has improved my speed, quality, or response rates.",
+    "I track or estimate the time I save using AI, even informally.",
+    "I have adjusted or dropped an AI workflow because the results were not worth the effort.",
     "I could explain the value AI adds to my work if a client or manager asked me to justify it."
   ]}
 ];
@@ -353,42 +363,42 @@ const questionsWe = [
   { id:"tools", name:"Tools", subtitle:"What you are actually using", emoji:"🛠️", questions:[
     "Our team uses AI across more than one stage of the recruitment process, such as sourcing, screening, research, or outreach.",
     "We have identified at least one AI tool that consistently saves our team time or improves the quality of our work.",
-    "Our team uses AI tools on most working days, not just when there is a spare moment.",
-    "We have experimented with multiple AI tools and made deliberate decisions about which ones to keep and which to drop."
+    "Our team uses AI tools on most working days, not just when there is spare time.",
+    "We have tried multiple AI tools and dropped the ones that did not genuinely improve our work."
   ]},
   { id:"skills", name:"Skills and Prompting", subtitle:"How well you are using them", emoji:"💡", questions:[
-    "Our recruiters can write or adapt prompts that consistently produce useful outputs with minimal rewriting.",
-    "Our team chooses different AI tools for different tasks based on what each does best, rather than defaulting to one tool for everything.",
+    "Our recruiters can create or adapt prompts that consistently produce useful outputs with minimal rewriting.",
+    "Our team chooses different AI tools for different tasks based on what each one does best, rather than using one tool for everything.",
     "Our team has actively developed AI skills in the past 12 months, through training, self-study, or structured experimentation.",
-    "Useful prompts and approaches are documented and shared across the team so knowledge builds collectively rather than sitting with individuals."
+    "Useful prompts and workflows are documented, shared, and improved across the team so knowledge builds collectively rather than sitting with individuals."
   ]},
   { id:"workflows", name:"Workflows and Integration", subtitle:"Where AI fits in your process", emoji:"⚙️", questions:[
     "AI plays a defined role at specific stages of our recruitment process, such as sourcing, screening, outreach, or admin.",
-    "When our team uses AI, it is part of a deliberate process rather than something used randomly when time allows.",
-    "AI tools connect to or sit alongside the core systems our team uses daily, such as our ATS or CRM, rather than being entirely separate.",
-    "When we use AI in our workflows, we review whether each step is actually delivering value rather than just leaving it running."
+    "AI is part of a structured workflow across our team, rather than something used randomly when there is time.",
+    "AI connects to or works alongside our ATS, CRM, or the core tools our team uses daily, rather than sitting as a separate step.",
+    "We regularly review whether our AI-assisted steps are still the most efficient approach, rather than setting them up once and leaving them."
   ]},
   { id:"policy", name:"Policy and Safety", subtitle:"How you manage risk", emoji:"🔒", questions:[
     "We have clear internal guidance on what client, candidate, or company data can safely be entered into AI tools.",
-    "Our team understands the difference between what data is appropriate to enter into a free-tier AI tool and what is not.",
-    "Before using an AI tool with sensitive information, we check whether it stores or trains on the data entered.",
-    "Our team has a shared expectation that AI-generated content is always reviewed by a human before it reaches a candidate, client, or colleague."
+    "Our team knows the difference between what data is safe to enter into a free-tier AI tool and what is not.",
+    "We check whether an AI tool stores or trains on our data before using it with client or candidate information.",
+    "Our team has a clear expectation that AI-generated content is always reviewed by a human before it reaches a candidate, client, or colleague."
   ]},
   { id:"culture", name:"Culture and Leadership", subtitle:"How it feels inside the team", emoji:"🌱", questions:[
-    "AI usage is openly discussed and shared across our team, rather than treated as an individual advantage.",
+    "AI usage is openly discussed and shared across our team, rather than hidden or treated as an individual advantage.",
     "We actively encourage trying new things with AI, even when previous attempts have not worked out.",
-    "We follow a clear set of principles for how our team uses AI responsibly, even if they are not formally documented.",
+    "We follow a clear set of rules for how our team uses AI responsibly, even if they are not formally documented.",
     "Our team understands that AI handles the tasks and humans handle the trust, and that belief shapes how we use it."
   ]},
   { id:"measurement", name:"Measurement and Impact", subtitle:"Whether you can prove what AI is doing for you", emoji:"📊", questions:[
     "Our team can point to specific examples of how AI has improved speed, quality, or hiring outcomes.",
-    "We have some sense of the time or effort AI saves across the team, even if we have never formally tracked it.",
-    "We have changed or stopped using an AI approach because the results were not worth the effort.",
+    "We track or estimate the time saved or efficiency gained from AI use across the team.",
+    "We have adjusted or dropped AI workflows that were not delivering measurable value.",
     "We could present a clear case to leadership for continued or increased AI investment based on results."
   ]}
 ];
 
-const scaleDesc = ["Strongly Disagree","Disagree","Agree","Strongly Agree"];
+const scaleDesc = ["Not yet","Sometimes","Mostly","Always"];
 const roleOpeners = { solo:"As a solo recruiter, you", individual:"You", team:"Your team" };
 const socialProofLines = {
   observer:"Most recruiters globally score in this range. Here is where you landed.",
@@ -397,6 +407,12 @@ const socialProofLines = {
   fluent:"You are in the top tier globally. Here is where you landed."
 };
 
+const shareTexts = {
+  observer:"Just took Vanessa Raath's AI Fluency Assessment for Recruiters. Honest reality check on where I am with AI. Curious where you would land?",
+  dabbler:"Turns out I am an AI Dabbler. Vanessa Raath's AI Fluency Assessment gave me a proper reality check and a clear next step. Where would you score?",
+  integrator:"AI Integrator, apparently. Vanessa Raath's free assessment is the most honest 5 minutes you will spend on your AI journey this month.",
+  fluent:"Scored as an AI-Fluent Recruiter on Vanessa Raath's assessment. Took 5 minutes and still spotted gaps I had not thought about. Worth a go."
+};
 
 const profiles = [
   { range:[24,42], name:"The AI Observer", key:"observer",
@@ -496,7 +512,7 @@ function renderCategory(idx){
     card.innerHTML=`
       <div class="question-number">QUESTION ${qNum} OF 24</div>
       <div class="question-text">${q}</div>
-      <div class="scale-labels"><span class="scale-label">Strongly Disagree</span><span class="scale-label">Strongly Agree</span></div>
+      <div class="scale-labels"><span class="scale-label">Not yet</span><span class="scale-label">Always</span></div>
       <div class="scale-options" id="scale-${idx}-${qi}">
         ${[1,2,3,4].map(v=>`
           <button class="scale-btn ${saved===v?"selected":""}" onclick="selectAnswer(${idx},${qi},${v},this)">
@@ -585,6 +601,7 @@ function showResults(){
   document.getElementById("resultAdvice").innerHTML=profile.advice(userRole).replace(/\n\n/g,"<br><br>");
   document.getElementById("trainingNudge").innerHTML="<strong>A THOUGHT FROM VANESSA</strong> "+profile.training;
   document.getElementById("resultCongrats").style.display=profile.congrats?"inline-block":"none";
+  document.getElementById("shareText").textContent=shareTexts[profile.key]+" "+ASSESSMENT_URL;
   renderBreakdown();
 }
 
@@ -632,6 +649,11 @@ function renderBreakdown(){
   },100);
 }
 
+function shareOnLinkedIn(){
+  const text=document.getElementById("shareText").textContent;
+  const url="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(ASSESSMENT_URL)+"&summary="+encodeURIComponent(text);
+  window.open(url,"_blank");
+}
 
 function restartAssessment(){
   answers={}; currentCat=0; userRole="individual"; userRoleLabel=""; categories=questionsI;
@@ -647,10 +669,10 @@ function restartAssessment(){
 }
 
 document.addEventListener("DOMContentLoaded",()=>{
-  document.querySelectorAll(".role-option input").forEach(input=>{
-    input.addEventListener("change",()=>{
+  document.querySelectorAll(".role-option").forEach(label=>{
+    label.addEventListener("click",()=>{
       document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
-      input.closest(".role-option").classList.add("selected");
+      label.classList.add("selected");
     });
   });
 });
