@@ -100,26 +100,6 @@
   .training-nudge { background:linear-gradient(135deg,#fff8f5,#fff); border:1px solid #ffd5c0; border-left:4px solid var(--orange); border-radius:12px; padding:18px 22px; margin-top:20px; font-size:13px; line-height:1.7; color:var(--slate); }
   .training-nudge strong { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--orange); display:block; margin-bottom:6px; }
   .training-nudge a { color:var(--orange); text-decoration:underline; }
-  .about-van { background:var(--deep-teal); border-radius:16px; padding:32px 28px; margin-top:20px; }
-  .about-van-title { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:6px; }
-  .about-van-name { font-family:"Caveat",cursive; font-size:32px; color:#fff; margin-bottom:12px; }
-  .about-van-bio { font-size:13px; line-height:1.75; color:rgba(255,255,255,0.85); margin-bottom:20px; }
-  .about-van-stats { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px; }
-  .stat-pill { background:rgba(255,255,255,0.1); border-radius:8px; padding:10px 16px; text-align:center; flex:1; min-width:110px; text-decoration:none; display:block; }
-  .stat-num { font-family:"Montserrat",sans-serif; font-size:18px; font-weight:800; color:var(--orange); display:block; }
-  .stat-label { font-size:11px; color:rgba(255,255,255,0.65); display:block; margin-top:2px; }
-  .work-section-title { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:10px; }
-  .work-with-van { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
-  .work-card { background:rgba(255,255,255,0.08); border-radius:10px; padding:14px 16px; flex:1; min-width:140px; }
-  .work-card-title { font-family:"Montserrat",sans-serif; font-size:11px; font-weight:700; color:var(--orange); margin-bottom:4px; }
-  .work-card-desc { font-size:12px; color:rgba(255,255,255,0.75); line-height:1.5; }
-  .speak-cta { background:rgba(255,255,255,0.08); border-radius:10px; padding:16px 20px; margin-bottom:16px; font-size:13px; color:rgba(255,255,255,0.85); line-height:1.7; }
-  .speak-cta a { color:var(--orange); text-decoration:underline; }
-  .linkedin-cta { background:rgba(255,255,255,0.08); border-radius:12px; padding:20px 22px; display:flex; align-items:center; gap:18px; }
-  .linkedin-cta-text { font-size:12px; line-height:1.65; color:rgba(255,255,255,0.9); flex:1; }
-  .linkedin-cta-text strong { color:#fff; font-weight:600; }
-  .btn-linkedin { font-family:"Montserrat",sans-serif; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#fff; background:#0077B5; border:none; border-radius:8px; padding:11px 18px; cursor:pointer; text-decoration:none; white-space:nowrap; display:inline-block; transition:background 0.2s; }
-  .btn-linkedin:hover { background:#005f91; }
   .footer { background:var(--slate); padding:18px 32px; text-align:center; margin-top:48px; }
   .footer .tagline { font-family:"Caveat",cursive; font-size:17px; color:rgba(255,255,255,0.65); margin-bottom:6px; }
   .footer p { font-size:11px; color:rgba(255,255,255,0.45); }
@@ -129,8 +109,8 @@
     .hero{padding:36px 18px 32px;} .hero h1{font-size:34px;}
     .main{padding:20px 14px 50px;} .question-card{padding:18px;}
     .intro-box,.leadgen-box{padding:28px 20px;} .result-hero{padding:32px 20px;}
-    .result-profile-name{font-size:36px;} .about-van-stats,.work-with-van{flex-direction:column;}
-    .linkedin-cta{flex-direction:column;text-align:center;} .progress-wrap{padding:10px 18px;}
+    .result-profile-name{font-size:36px;} }
+     .progress-wrap{padding:10px 18px;}
     .scale-preview-row{flex-wrap:wrap;} .scale-preview-item{min-width:40%;}
   }
 </style>
@@ -159,7 +139,7 @@
   <div class="screen active" id="screen-intro">
     <div class="intro-box">
       <h2>Before you start</h2>
-      <div class="intro-note">Takes about 5 minutes. Answer honestly   this assessment measures behaviour, not intention.</div>
+      <div class="intro-note">Takes about 10 minutes. Answer honestly, this assessment measures behaviour, not intention.</div>
       <p>This assessment covers six areas of AI fluency in recruitment. There are no right or wrong answers, only an honest reflection of where you are right now.</p>
       <p><strong>Each set of questions is divided into these categories:</strong></p>
       <div class="intro-chips">
@@ -250,48 +230,8 @@
     </div>
 </div>
 
-    <div class="breakdown-title">YOUR CATEGORY BREAKDOWN</div>
-    <div id="catBreakdown"></div>
 
-    <div class="about-van">
-      <div class="about-van-title">About Your Assessor</div>
-      <div class="about-van-name">Vanessa Raath</div>
-      <div class="about-van-bio">Vanessa is a global talent sourcing trainer, keynote speaker, and AI strategist. Since launching The Talent Hunter in 2019, she has trained over 8,000 recruiters across more than 100 countries, helping them work smarter with AI without losing the human edge that makes great recruitment possible.</div>
-      <div class="about-van-stats">
-        <a class="stat-pill" href="https://www.linkedin.com/in/vanessaraath/" target="_blank">
-          <span class="stat-num">580+</span><span class="stat-label">LinkedIn Recommendations</span>
-        </a>
-        <a class="stat-pill" href="https://www.trustpilot.com/review/vanessaraath.com" target="_blank">
-          <span class="stat-num">4.8 / 5</span><span class="stat-label">Trustpilot Rating</span>
-        </a>
-        <div class="stat-pill">
-          <span class="stat-num">100+</span><span class="stat-label">Countries Reached</span>
-        </div>
-      </div>
-      <div class="work-section-title">Ways to Work With Vanessa</div>
-      <div class="work-with-van">
-        <div class="work-card">
-          <div class="work-card-title">AI Fluency Training</div>
-          <div class="work-card-desc">Live workshops and online academy courses covering prompt engineering, choosing the right LLM by use case, and embedding AI into your daily recruitment workflow.</div>
-        </div>
-        <div class="work-card">
-          <div class="work-card-title">Keynote Speaking</div>
-          <div class="work-card-desc">As a thought leader in AI and recruitment, Vanessa has keynoted on five continents. She is a sought-after speaker with outstanding ratings, known for leaving audiences informed, energised, and ready to act.</div>
-        </div>
-        <div class="work-card">
-          <div class="work-card-title">AI Consulting</div>
-          <div class="work-card-desc">Strategic AI advisory for recruitment teams and agencies ready to build a proper AI framework, from tool selection to team adoption.</div>
-        </div>
-      </div>
-      <div class="speak-cta">
-        Interested in Vanessa speaking at your next event, running a Prompt Engineering Workshop with your team, or getting guidance on your next AI tool purchase? Get in touch: <a href="mailto:van&#64;vanessaraath.com">van&#64;vanessaraath.com</a>
-      </div>
-      <div class="linkedin-cta">
-        <div class="linkedin-cta-text">
-          <strong>Follow Vanessa on LinkedIn</strong> for practical AI and sourcing insights, no hype, just what is actually working. You will also receive the <strong>Recruitment RewAIred Newsletter</strong> every second week.
-        </div>
-        <a class="btn-linkedin" href="https://www.linkedin.com/in/vanessaraath/" target="_blank">Follow on LinkedIn</a>
-      </div>
+    <div id="catBreakdown"></div>
     </div>
 
     <div style="text-align:center;margin-top:28px;">
@@ -306,7 +246,7 @@
   <p>© Vanessa Raath, The Talent Hunter &nbsp;|&nbsp; <a href="https://www.vanessaraath.com" target="_blank">vanessaraath.com</a> &nbsp;|&nbsp; #upyourhuman</p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const FORMSPREE = "https://formspree.io/f/meervjgr";
 const ASSESSMENT_URL = "https://airecruiterassessment.netlify.app";
 
@@ -644,4 +584,12 @@ function restartAssessment(){
 
 document.addEventListener("DOMContentLoaded",()=>{
   document.querySelectorAll(".role-option").forEach(label=>{
-    label.add
+    label.addEventListener("click",()=>{
+      document.querySelectorAll(".role-option").forEach(r=>r.classList.remove("selected"));
+      label.classList.add("selected");
+    });
+  });
+});
+</script>
+</body>
+</html>
